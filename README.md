@@ -1,5 +1,5 @@
 # GoingUI
-Powerful lightweight interface framework for components, SPAs and whatever else. Write JavaScript, not framework.
+Powerful lightweight web UI framework for components, SPAs and whatever else. Write JavaScript, not framework.
 
 ## How do I start using GoingUI?
 Add GoingUI to your project with `<script src = 'going-ui.js'></script>` and start using it by creating a new instance with `var gapp = new GoingUI()`.
