@@ -5,6 +5,9 @@ Powerful lightweight web UI framework for components, SPAs and whatever else. Wr
 Add GoingUI to your project with `<script src = 'going-ui.js'></script>` and start using it by creating a new instance with `var gapp = new GoingUI()`.
 
 ## What's it for? When would I use it?
+
+### Components
+
 Let's say you're building a digital scrapbook. It's going to be filled with photos and text boxes with descriptions of the photos. There's a bunch of ways you could do this. You could write the HTML for one photo, then copy and paste it, but that will get messy on the page fast, and if you want to make a change to the format, you'll need to change it for each one. Let's say we want to do it with JavaScript, say, populating the photos on the page from JSON. Here's how you might do it in pure JavaScript.
 
 ```
@@ -83,6 +86,35 @@ This works, but it's a lot of code to do something very simple. It gets even mor
 	</script>
 ```
 
+### Data binding
+
+GoingUI supports basic two way data binding. Here's an example.
+
+Input field (gobind):
+
+```
+<!-- The innerHTML of the span will automagically change to whatever the contents of the text input are because the input box has a gobind of "name" and the span has a JSON innerHTML property of "name". -->
+<input type = 'text' data-gobind = 'name'>
+<span data-gomodel = '{"innerHTML":"name"}'></span>
+
+```
+
+JavaScript (update method):
+```
+<span data-gomodel = '{"innerHTML":"name"}'></span>
+
+<script>
+	//Setting the value of 'name' using the update method will automatically set the innerHTML of the span
+	gapp.set({"name":"Sal Lami"});
+</script>
+```
+
+You can set just about any valid DOM property:
+```
+<!-- Type a valid HTML color into the text input and the span text will change color! -->
+<input type = 'text' data-gobind = 'textColor'>
+<span data-gomodel = '{"style":{"color":"textColor"}}'></span>
+```
 ## Can GoingUI be used to create entire SPAs?
 
 Yes, and it has been! But that documentation is coming soon.
