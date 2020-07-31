@@ -57,7 +57,7 @@ This works, but it's a lot of code to do something very simple. It gets even mor
 			gapp.create("photo", {
 				"image": { "src": "momsbirthday.png" },
 				"desc": { "innerHTML": "Picture of mom on her birthday." }
-			}
+			}).content
 		);
 	</script>
 ```
@@ -81,7 +81,7 @@ This works, but it's a lot of code to do something very simple. It gets even mor
 			gapp.create("photo", {
 				"image": { "src": "momsbirthday.png" },
 				"desc": { "innerHTML": "Picture of mom on her birthday." }
-			}
+			}).content
 		);
 	</script>
 ```
